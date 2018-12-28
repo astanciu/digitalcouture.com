@@ -1,5 +1,5 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
 import { CoreLayout } from '../components';
 import './index.css';
@@ -24,20 +24,20 @@ export default props => {
   return (
     <CoreLayout>
       <div className="parent">
-        <div className="child"> <Img fluid={Coral_Front} /> </div>
-        <div className="child"> <Img fluid={OrangeLilly} /> </div>
-        <div className="child"> <Img fluid={Mediteranean_Back} /> </div>
-        <div className="child"> <Img fluid={Party} /> </div>
-        <div className="child"><Img fluid={EmpireDress_Enchanted} /></div>
-        <div className="child"><Img fluid={Derby_Front} /></div>
-        <div className="child"><Img fluid={Dress_Ocean} /></div>
-        <div className="child"><Img fluid={Dress_Venutian} /></div>
-        <div className="child"><Img fluid={EmpireDress_Zip} /></div>
-        <div className="child"><Img fluid={EmprieDress_Orchids} /></div>
-        <div className="child"><Img fluid={Fresco_Back2} /></div>
-        <div className="child"><Img fluid={LongJacket_PLABLU} /></div>
-        <div className="child"><Img fluid={LongJacket_Peacock} /></div>
-        <div className="child"><Img fluid={LongJacket_RedFlower} /></div>
+        <div className="child"><Link to="/products/aegean-coral-ensamble"><Img fluid={Coral_Front} /></Link></div>
+        <div className="child"><Link to="/"><Img fluid={OrangeLilly} /></Link></div>
+        <div className="child"><Link to="/products/mediterranean-night-ensemble"><Img fluid={Mediteranean_Back} /></Link></div>
+        <div className="child"><Link to="/products/party-dress"><Img fluid={Party} /></Link></div>
+        <div className="child"><Link to="/products/aphrodite"><Img fluid={EmpireDress_Enchanted} /></Link></div>
+        <div className="child"><Link to="/"><Img fluid={Derby_Front} /></Link></div>
+        <div className="child"><Link to="/products/amphitrite-dress"><Img fluid={Dress_Ocean} /></Link></div>
+        <div className="child"><Link to="/products/venusians-dress"><Img fluid={Dress_Venutian} /></Link></div>
+        <div className="child"><Link to="/products/promethean-dress"><Img fluid={EmpireDress_Zip} /></Link></div>
+        <div className="child"><Link to="/products/orchis-avatar-dress"><Img fluid={EmprieDress_Orchids} /></Link></div>
+        <div className="child"><Link to="/products/fresco-short-jacket"><Img fluid={Fresco_Back2} /></Link></div>
+        <div className="child"><Link to="/"><Img fluid={LongJacket_PLABLU} /></Link></div>
+        <div className="child"><Link to="/products/peacock-jacket"><Img fluid={LongJacket_Peacock} /></Link></div>
+        <div className="child"><Link to="/products/amaryllis-duster"><Img fluid={LongJacket_RedFlower} /></Link></div>
       </div>
     </CoreLayout>
   );
