@@ -14,7 +14,7 @@
 .child {
   /* border: 1px solid red; */
 
-  width: 100px;
+  width: 200px;
 
   display: inline-block;
   align-self: stretch;
@@ -23,14 +23,17 @@
 }
 
 @media only screen 
-and (orientation : landscape) { 
-  .child {
-    width: 200px;
-  }
-}
-@media only screen 
-and (orientation : portrait) { 
+and (max-width: 530px) 
+ { 
   .child {
     width: 100%;
   }
 }
+
+/* @media only screen 
+and (max-width: 530px) 
+and (orientation : portrait) { 
+  .child {
+    width: 100%;
+  }
+} */
