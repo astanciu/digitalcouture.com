@@ -9,7 +9,8 @@
     "api": "source ./.env && yarn micro-dev ./api/contact.js",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "now-build": "npm run build"
+    "now-build": "npm run build",
+    "deploy": "now && now alias"
   },
   "dependencies": {
     "@sendgrid/mail": "^6.3.1",
