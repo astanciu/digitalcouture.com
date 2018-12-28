@@ -1,0 +1,46 @@
+.prod {
+  display: flex;
+  width: 85%;
+  margin: auto;
+}
+.prod-details{
+  width: 65%;
+  padding: 20px;
+}
+.primary-image {
+  /* border: 1px solid blue; */
+  width: 35%;
+  padding-top: 50px;
+}
+
+.other-images{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+.other-image {
+  width: 100px;
+  /* border: 1px solid green; */
+}
+
+@media only screen 
+and (orientation : portrait)
+and (max-width: 450px) { 
+  .prod {
+    flex-direction: column;
+  }
+  .primary-image{
+    width: 100%;
+    padding-top: 10px;
+  }
+  /* .other-image {
+    width: 50px;
+  } */
+  .prod-details{
+    width: 100%;
+  }
+  .prod-desc{
+    padding-top: 40px;
+  }
+}

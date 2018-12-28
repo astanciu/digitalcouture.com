@@ -1,0 +1,57 @@
+.app {
+  max-width: 1024px;
+  margin: auto;
+}
+@media only screen 
+and (orientation : portrait)
+and (max-width: 450px) { 
+  .app {
+    width: 100%;
+  }
+}
+
+.breadcrumb {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: flex-end;
+  list-style: none;
+  border-radius: .25rem;
+  margin-left: 0px;
+  font-size: 12px;
+  margin-bottom: 0px; 
+}
+
+.breadcrumb-item:not(:last-child) {
+  margin-bottom: 0px;
+  margin-right: 10px;
+}
+
+
+.breadcrumb-item:not(:last-child):after {
+  content: '/';
+    color: #464646;
+    padding-left: 10px;
+}
+
+.breadcrumb-item > a {
+  font-weight: 100;
+  color: #50b9ef;
+}
+.breadcrumb-item.active > a {
+  color: #b5b5b5;
+}
+
+.page {
+  padding: 0px 20px;
+}
+
+.logo {
+  height: 30px;
+  margin-top: 0px;
+  padding: 0px;
+}
+
+a {
+  color: blue;
+}
+
