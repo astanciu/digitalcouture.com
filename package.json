@@ -9,12 +9,10 @@
     "api": "source ./.env && yarn micro-dev ./api/contact.js",
     "build": "gatsby build",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\"",
     "now-build": "npm run build"
   },
   "dependencies": {
     "@sendgrid/mail": "^6.3.1",
-    "bootstrap": "^4.2.1",
     "dotenv": "^6.2.0",
     "gatsby": "^2.0.75",
     "gatsby-image": "^2.0.25",
@@ -26,7 +24,6 @@
     "gatsby-source-filesystem": "^2.0.12",
     "gatsby-transformer-sharp": "^2.1.9",
     "micro": "^9.3.3",
-    "micro-dev": "^3.0.0",
     "react": "^16.5.1",
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
@@ -34,7 +31,9 @@
     "react-typography": "^0.16.18",
     "reactstrap": "^6.5.0",
     "typography": "^0.16.18",
-    "typography-theme-bootstrap": "^0.16.18",
     "typography-theme-moraga": "^0.16.18"
+  },
+  "devDependencies": {
+    "micro-dev": "^3.0.0"
   }
 }
