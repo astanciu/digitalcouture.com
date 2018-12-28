@@ -7,6 +7,10 @@
       "src": "package.json",
       "use": "@now/static-build",
       "config": { "distDir": "public" }
-    }
-  ]
+    },
+    { "src": "/api/contact.js", "use": "@now/node" }
+  ],
+  "env": {
+    "SENDGRID_KEY": "@sendgrid"
+  }
 }

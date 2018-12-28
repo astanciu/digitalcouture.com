@@ -1,0 +1,53 @@
+const sgMail = require('@sendgrid/mail');
+const key = process.env.SENDGRID_KEY
+
+module.exports = async (req, res) => {
+  console.log(JSON.stringify(req, null, 4))
+  if (!key){
+    console.log('Missing Key: ', process.env.SENDGRID_KEY)
+    throw new Error('missing key')
+  }
+
+  try {
+    if (req.method === 'POST') {
+      let body = '';
+      req.on('data', chunk => {
+        body += chunk.toString(); // convert Buffer to string
+      });
+      req.on('end', async () => {
+        try {
+        body = JSON.parse(body)
+        await send(body);
+        let obj = { okay: true };
+        res.writeHead(200, { 'Content-Type': 'application/json' });
+        res.write(JSON.stringify(obj));
+        res.end();
+        }catch(err){
+          console.log('Oops...')
+          console.log(err)
+          throw new err
+        }
+      });
+
+    }else{
+      return res.end('bad');
+    }
+
+  } catch (e) {
+    console.log(e);
+    throw e;
+  }
+
+};
+
+function send(data) {
+  sgMail.setApiKey(key);
+  const msg = {
+    to: 'astanciu@gmail.com',
+    from: 'web-form@digitalcouture.com',
+    subject: 'Contact Form - digitalcouture.com',
+    text: JSON.stringify(data,null, 4),
+    
+  };
+  sgMail.send(msg);
+}

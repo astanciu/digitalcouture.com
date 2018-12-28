@@ -4,6 +4,10 @@ module.exports = {
   siteMetadata: {
     title: 'Digital Couture'
   },
+  proxy: {
+    prefix: "/api",
+    url: "http://localhost:3000",
+  },
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
@@ -33,6 +37,17 @@ module.exports = {
       }
     },
     `gatsby-transformer-sharp`,
-    `gatsby-plugin-react-helmet`
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: "UA-69050-11",
+        head: false,
+        respectDNT: true,
+        // Enables Google Optimize using your container Id
+        optimizeId: "YOUR_GOOGLE_OPTIMIZE_TRACKING_ID",
+        cookieDomain: "digitalcouture.com",
+      },
+    },
   ]
 };
