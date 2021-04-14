@@ -1,6 +1,3 @@
-vercel secret add sendgrid 
-
-
 {
   "version": 2,
   "name": "digitalcouture",
@@ -16,6 +13,6 @@ vercel secret add sendgrid
   "env": {
     "SENDGRID_KEY": "@sendgrid-key",
     "ACCESS_TOKEN": "@dc-access-token",
-    "SPACE_ID":"@dc-space-id"
+    "SPACE_ID": "@dc-space-id"
   }
 }
