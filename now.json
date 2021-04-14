@@ -1,3 +1,6 @@
+vercel secret add sendgrid 
+
+
 {
   "version": 2,
   "name": "digitalcouture",
@@ -11,6 +14,8 @@
     { "src": "/api/contact.js", "use": "@now/node" }
   ],
   "env": {
-    "SENDGRID_KEY": "@sendgrid"
+    "SENDGRID_KEY": "@sendgrid-key",
+    "ACCESS_TOKEN": "@dc-access-token",
+    "SPACE_ID":"@dc-space-id"
   }
 }
