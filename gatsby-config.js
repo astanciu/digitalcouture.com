@@ -4,10 +4,6 @@ module.exports = {
   siteMetadata: {
     title: "Digital Couture",
   },
-  proxy: {
-    prefix: "/api",
-    url: "http://localhost:3000",
-  },
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
@@ -36,6 +32,8 @@ module.exports = {
         stripMetadata: true,
       },
     },
+    `gatsby-plugin-image`,
+    `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-react-helmet`,
     {

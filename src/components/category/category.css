@@ -14,12 +14,17 @@
 }
 
 .product-thumbnail {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   /* border: 1px solid #e6e6e6; */
   align-self: stretch;
   width: 150px;
   text-align: center;
   margin-bottom: 50px;
+}
+.product-thumbnail-image{
+  display: flex;
+  justify-content: center;
 }
 
 .product-thumbnail > a {

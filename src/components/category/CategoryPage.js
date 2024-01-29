@@ -33,12 +33,7 @@ export const pageQuery = graphql`
         title
         slug
         primaryImage {
-          fixed(width: 100, height: 150, resizingBehavior: THUMB) {
-            width
-            height
-            src
-            srcSet
-          }
+          gatsbyImageData(layout: FIXED, width: 100, height: 150, resizingBehavior: THUMB)
         }
       }
       subCategory: category {
@@ -48,17 +43,9 @@ export const pageQuery = graphql`
           title
           slug
           primaryImage {
-            # fixed(width:100, height: 150, resizingBehavior:THUMB) {
-            #     ...GatsbyContentfulFixed_tracedSVG
-            #   }
-            fixed(width: 100, height: 150, resizingBehavior: THUMB) {
-              tracedSVG
-              aspectRatio
-              width
-              height
-              src
-              srcSet
-            }
+            
+            gatsbyImageData(layout: FIXED, width: 100, height: 150, resizingBehavior: THUMB)
+
           }
         }
       }

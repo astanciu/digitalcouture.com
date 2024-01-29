@@ -4,7 +4,7 @@
   "description": "digitalcouture.com website",
   "version": "0.1.0",
   "scripts": {
-    "develop": "gatsby develop -H c02q74q1g8wn.local",
+    "dev": "gatsby develop",
     "start": "npm run develop",
     "api": "source ./.env && yarn micro-dev ./api/contact.js",
     "build": "gatsby build",
@@ -15,18 +15,18 @@
   "dependencies": {
     "@sendgrid/mail": "6.5.5",
     "dotenv": "^6.2.0",
-    "gatsby": "2.32.12",
-    "gatsby-image": "2.11.0",
-    "gatsby-plugin-google-analytics": "2.11.0",
-    "gatsby-plugin-react-helmet": "3.10.0",
-    "gatsby-plugin-sharp": "3.3.0",
-    "gatsby-plugin-typography": "2.12.0",
-    "gatsby-source-contentful": "2.3.56",
-    "gatsby-source-filesystem": "2.11.1",
-    "gatsby-transformer-sharp": "2.12.1",
+    "gatsby": "^5.0.0",
+    "gatsby-plugin-google-analytics": "^5.13.1",
+    "gatsby-plugin-image": "^3.13.1",
+    "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-typography": "^5.13.1",
+    "gatsby-source-contentful": "^8.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
     "micro": "^9.3.3",
-    "react": "^16.5.1",
-    "react-dom": "^16.5.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
     "react-helmet": "^5.2.0",
     "react-responsive": "^6.0.1",
     "react-typography": "^0.16.18",
@@ -35,6 +35,8 @@
     "typography-theme-moraga": "^0.16.18"
   },
   "devDependencies": {
-    "micro-dev": "^3.0.0"
-  }
+    "micro-dev": "^3.0.0",
+    "wrangler": "^3.25.0"
+  },
+  "packageManager": "yarn@4.0.2"
 }

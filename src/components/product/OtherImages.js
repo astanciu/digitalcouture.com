@@ -1,11 +1,11 @@
 import React from 'react'
-import Img from 'gatsby-image'
+import { GatsbyImage } from "gatsby-plugin-image";
 
 export class OtherImages extends React.Component {
   render() {
     const images = (this.props.item.otherImages || []).map(i => 
     <div className="other-image" key={i.contentful_id}>
-    <Img fixed={i.fixed} />
+    <GatsbyImage image={i.gatsbyImageData} alt="side view"/>
     </div>)
     
     return (
