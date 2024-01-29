@@ -4,10 +4,6 @@ module.exports = {
   siteMetadata: {
     title: "Digital Couture",
   },
-  proxy: {
-    prefix: "/api",
-    url: "http://localhost:3000",
-  },
   plugins: [
     {
       resolve: `gatsby-plugin-typography`,
