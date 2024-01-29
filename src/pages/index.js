@@ -1,43 +1,43 @@
 import React from 'react';
 import { graphql, Link } from 'gatsby';
-import Img from 'gatsby-image';
+import { GatsbyImage } from "gatsby-plugin-image";
 import { CoreLayout } from '../components';
 import './index.css';
 
 export default props => {
   
-  const Coral_Front = props.data.Coral_Front.childImageSharp.fluid;
-  const Derby_Front = props.data.Derby_Front.childImageSharp.fluid;
-  const Dress_Ocean = props.data.Dress_Ocean.childImageSharp.fluid;
-  const Dress_Venutian = props.data.Dress_Venutian.childImageSharp.fluid;
-  const EmpireDress_Enchanted = props.data.EmpireDress_Enchanted.childImageSharp.fluid;
-  const EmpireDress_Zip = props.data.EmpireDress_Zip.childImageSharp.fluid;
-  const EmprieDress_Orchids = props.data.EmprieDress_Orchids.childImageSharp.fluid;
-  const Fresco_Back2 = props.data.Fresco_Back2.childImageSharp.fluid;
-  const LongJacket_PLABLU = props.data.LongJacket_PLABLU.childImageSharp.fluid;
-  const LongJacket_Peacock = props.data.LongJacket_Peacock.childImageSharp.fluid;
-  const LongJacket_RedFlower = props.data.LongJacket_RedFlower.childImageSharp.fluid;
-  const Mediteranean_Back = props.data.Mediteranean_Back.childImageSharp.fluid;
-  const OrangeLilly = props.data.OrangeLilly.childImageSharp.fluid;
-  const Party = props.data.Party.childImageSharp.fluid;
+  const Coral_Front = props.data.Coral_Front.childImageSharp.gatsbyImageData;
+  const Derby_Front = props.data.Derby_Front.childImageSharp.gatsbyImageData;
+  const Dress_Ocean = props.data.Dress_Ocean.childImageSharp.gatsbyImageData;
+  const Dress_Venutian = props.data.Dress_Venutian.childImageSharp.gatsbyImageData;
+  const EmpireDress_Enchanted = props.data.EmpireDress_Enchanted.childImageSharp.gatsbyImageData;
+  const EmpireDress_Zip = props.data.EmpireDress_Zip.childImageSharp.gatsbyImageData;
+  const EmprieDress_Orchids = props.data.EmprieDress_Orchids.childImageSharp.gatsbyImageData;
+  const Fresco_Back2 = props.data.Fresco_Back2.childImageSharp.gatsbyImageData;
+  const LongJacket_PLABLU = props.data.LongJacket_PLABLU.childImageSharp.gatsbyImageData;
+  const LongJacket_Peacock = props.data.LongJacket_Peacock.childImageSharp.gatsbyImageData;
+  const LongJacket_RedFlower = props.data.LongJacket_RedFlower.childImageSharp.gatsbyImageData;
+  const Mediteranean_Back = props.data.Mediteranean_Back.childImageSharp.gatsbyImageData;
+  const OrangeLilly = props.data.OrangeLilly.childImageSharp.gatsbyImageData;
+  const Party = props.data.Party.childImageSharp.gatsbyImageData;
 
   return (
     <CoreLayout>
       <div className="parent">
-        <div className="child"><Link to="/products/aegean-coral-ensamble"><Img fluid={Coral_Front} /></Link></div>
-        <div className="child"><Link to="/"><Img fluid={OrangeLilly} /></Link></div>
-        <div className="child"><Link to="/products/mediterranean-night-ensemble"><Img fluid={Mediteranean_Back} /></Link></div>
-        <div className="child"><Link to="/products/party-dress"><Img fluid={Party} /></Link></div>
-        <div className="child"><Link to="/products/aphrodite"><Img fluid={EmpireDress_Enchanted} /></Link></div>
-        <div className="child"><Link to="/"><Img fluid={Derby_Front} /></Link></div>
-        <div className="child"><Link to="/products/amphitrite-dress"><Img fluid={Dress_Ocean} /></Link></div>
-        <div className="child"><Link to="/products/venusians-dress"><Img fluid={Dress_Venutian} /></Link></div>
-        <div className="child"><Link to="/products/promethean-dress"><Img fluid={EmpireDress_Zip} /></Link></div>
-        <div className="child"><Link to="/products/orchis-avatar-dress"><Img fluid={EmprieDress_Orchids} /></Link></div>
-        <div className="child"><Link to="/products/fresco-short-jacket"><Img fluid={Fresco_Back2} /></Link></div>
-        <div className="child"><Link to="/"><Img fluid={LongJacket_PLABLU} /></Link></div>
-        <div className="child"><Link to="/products/peacock-jacket"><Img fluid={LongJacket_Peacock} /></Link></div>
-        <div className="child"><Link to="/products/amaryllis-duster"><Img fluid={LongJacket_RedFlower} /></Link></div>
+        <div className="child"><Link to="/products/aegean-coral-ensamble"><GatsbyImage image={Coral_Front} /></Link></div>
+        <div className="child"><Link to="/"><GatsbyImage image={OrangeLilly} /></Link></div>
+        <div className="child"><Link to="/products/mediterranean-night-ensemble"><GatsbyImage image={Mediteranean_Back} /></Link></div>
+        <div className="child"><Link to="/products/party-dress"><GatsbyImage image={Party} /></Link></div>
+        <div className="child"><Link to="/products/aphrodite"><GatsbyImage image={EmpireDress_Enchanted} /></Link></div>
+        <div className="child"><Link to="/"><GatsbyImage image={Derby_Front} /></Link></div>
+        <div className="child"><Link to="/products/amphitrite-dress"><GatsbyImage image={Dress_Ocean} /></Link></div>
+        <div className="child"><Link to="/products/venusians-dress"><GatsbyImage image={Dress_Venutian} /></Link></div>
+        <div className="child"><Link to="/products/promethean-dress"><GatsbyImage image={EmpireDress_Zip} /></Link></div>
+        <div className="child"><Link to="/products/orchis-avatar-dress"><GatsbyImage image={EmprieDress_Orchids} /></Link></div>
+        <div className="child"><Link to="/products/fresco-short-jacket"><GatsbyImage image={Fresco_Back2} /></Link></div>
+        <div className="child"><Link to="/"><GatsbyImage image={LongJacket_PLABLU} /></Link></div>
+        <div className="child"><Link to="/products/peacock-jacket"><GatsbyImage image={LongJacket_Peacock} /></Link></div>
+        <div className="child"><Link to="/products/amaryllis-duster"><GatsbyImage image={LongJacket_RedFlower} /></Link></div>
       </div>
     </CoreLayout>
   );
@@ -48,13 +48,14 @@ export const pageQuery = graphql`
     childImageSharp {
       id
       ... on ImageSharp {
-        fluid {
-          ...GatsbyImageSharpFluid
-          # aspectRatio
-          # src
-          # srcSet
-          # sizes
-        }
+        gatsbyImageData(layout: CONSTRAINED, width: 400, height: 600)
+        # fluid {
+        #   ...GatsbyImageSharpFluid
+        #   # aspectRatio
+        #   # src
+        #   # srcSet
+        #   # sizes
+        # }
       }
     }
   }

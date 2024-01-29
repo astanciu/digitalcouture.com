@@ -1,13 +1,13 @@
-import React from 'react';
-import Img from 'gatsby-image';
-import noimg from '../../images/no-image.jpg';
+import React from "react";
+import { GatsbyImage } from "gatsby-plugin-image";
+import noimg from "../../images/no-image.jpg";
 
 export const PrimaryImage = ({ imageData, resize }) => (
   <div className="primary-image">
     {imageData ? (
-       resize ? <Img fixed={imageData.resize} /> : <Img fluid={imageData.fluid} />
+      <GatsbyImage image={imageData.gatsbyImageData} alt="" />
     ) : (
-      <Img fixed={{base64: noimg, width: 150, height: 150}} />
+      <GatsbyImage image={{ base64: noimg, width: 150, height: 150 }} alt="primary image" />
     )}
   </div>
 );

@@ -11,7 +11,7 @@ const Category = ({ category }) => {
     products = (category.item || []).map((p) => <ProductThumbnail product={p} key={p.slug} />);
     products = <div className="subcategory-thumbs">{products}</div>;
   }
-  console.log("Category:", category);
+
   return (
     <>
       <BreadCrumb category={category} />
@@ -23,6 +23,7 @@ const Category = ({ category }) => {
 };
 
 const SubCategory = ({ subCategory }) => {
+
   return (
     <div className="subcategory">
       <h4>{subCategory.name}</h4>
